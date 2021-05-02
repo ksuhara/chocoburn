@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-primary {
+    @apply text-gray-900;
+  }
+  .text-secondary {
+    @apply text-gray-700;
+  }
+  .text-tertiary {
+    @apply text-gray-500;
+  }
+  .text-url {
+    @apply text-blue-400 underline;
+  }
+  .text-xs-address {
+    font-size: 0.5rem;
+  }
+}
