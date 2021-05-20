@@ -2,21 +2,25 @@
   "mainnet": {
     "chainId": "1",
     "rpc": "https://mainnet.infura.io/v3/95f65ab099894076814e8526f52c9149",
-    "explore": "https://etherscan.io/"
+    "explore": "https://etherscan.io/",
+    "fromBlock": "0x00"
   },
   "rinkeby": {
     "chainId": "4",
     "rpc": "https://rinkeby.infura.io/v3/95f65ab099894076814e8526f52c9149",
-    "explore": "https://rinkeby.etherscan.io/"
+    "explore": "https://rinkeby.etherscan.io/",
+    "fromBlock": "0x00"
   },
   "matic": {
     "chainId": "137",
-    "rpc": "https://rpc-mainnet.maticvigil.com/",
-    "explore": "https://explorer-mainnet.maticvigil.com/"
+    "rpc": "https://polygon-mainnet.infura.io/v3/7495501b681645b0b80f955d4139add9",
+    "explore": "https://explorer-mainnet.maticvigil.com/",
+    "fromBlock": "0xdf694f"
   },
   "bsc": {
     "chainId": "56",
     "rpc": "https://bsc-dataseed.binance.org/",
-    "explore": "https://bscscan.com/"
+    "explore": "https://bscscan.com/",
+    "fromBlock": "0x735dca"
   }
 }

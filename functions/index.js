@@ -6,6 +6,8 @@ const { ethers } = require("ethers");
 const { v4: uuidv4 } = require("uuid");
 const { signatureMessage } = require("./constant");
 const { getContractsForChainId } = require("./web3");
+const chainIdConfig = require("./configs/chainId.json");
+const networkConfig = require("./configs/network.json");
 
 admin.initializeApp();
 const firestore = admin.firestore();
@@ -73,7 +75,10 @@ module.exports.unlock = functions.region("asia-northeast1").https.onCall(async (
       "0x0000000000000000000000000000000000000000",
       Number(tokenId)
     );
-    const events = await erc721Contract.attach(lock.nftContractAddress).queryFilter(BurnEvent, 0, "latest");
+
+    const networkName = chainIdConfig[lock.chainId];
+    const { fromBlock } = networkConfig[networkName];
+    const events = await erc721Contract.attach(lock.nftContractAddress).queryFilter(BurnEvent, fromBlock, "latest");
     if (events.length < 1) {
       throw new functions.https.HttpsError(
         "failed-precondition",
