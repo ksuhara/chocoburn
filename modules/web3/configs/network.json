@@ -15,7 +15,7 @@
     "chainId": "137",
     "rpc": "https://polygon-mainnet.infura.io/v3/7495501b681645b0b80f955d4139add9",
     "explore": "https://explorer-mainnet.maticvigil.com/",
-    "fromBlock": "0xdf694f"
+    "fromBlock": "0xdf62ae"
   },
   "bsc": {
     "chainId": "56",
